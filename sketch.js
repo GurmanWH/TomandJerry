@@ -1,4 +1,4 @@
-var canvas,bgImg;
+var canvas,bg;
 var together;
 var cat,catImg1,catImg2,catImg3,catImg4;
 var mouse,mouseImg1,mouseImg2,mouseImg3,mouseImg4;
@@ -18,11 +18,11 @@ function preload() {
 function setup(){
     createCanvas(1000,800);
     //create tom and jerry sprites here
-    cat=createSprite(870,640);
-    //cat=addAnimation("catSleeping",catImg1);
+    cat=createSprite(870,600);
+    cat.addAnimation("catSleeping",catImg1);
     cat.scale=0.2;
 
-    mouse=createSprite(200,640);
+    mouse=createSprite(200,600);
     mouse.addAnimation("mouseStanding",mouseImg1);
     mouse.scale=0.15;
 }
@@ -37,7 +37,7 @@ function draw() {
       cat.addAnimation("catLastImage",catImg3);
       cat.x=300;
       cat.scale=0.2;
-      cat.changeAnimation("carLastImage");
+      cat.changeAnimation("catLastImage");
       mouse.addAnimation("mouseLastImage",mouseImg3);
       mouse.scale=0.15;
       mouse.changeAnimation("mouseLastImage");
